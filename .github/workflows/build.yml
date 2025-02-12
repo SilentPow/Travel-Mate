@@ -47,12 +47,6 @@ jobs:
           mkdir -p ~/.gradle
           echo "systemProp.gradle.enterprise.buildScanTermsOfServiceAgreement=yes" >> ~/.gradle/gradle.properties
 
-      - name: SonarCloud Setup
-        uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          organization: silentpow  # Replace with your organization name
-          token: ${{ secrets.SONAR_TOKEN }}  # Define SONAR_TOKEN in your GitHub secrets
-
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
