@@ -52,4 +52,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           ./Android/gradlew buildEnvironment --scan -Dgradle.enterprise.buildScanTermsOfServiceAgreement=yes
-          ./Android/gradlew clean build sonar --info -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          ./Android/gradlew build sonar --info -Dsonar.login=${{ secrets.SONAR_TOKEN }}
