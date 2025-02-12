@@ -52,4 +52,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           cd Android
-          .gradlew build sonarqube -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          ./gradlew build sonarqube -Dsonar.login=${{ secrets.SONAR_TOKEN }}
