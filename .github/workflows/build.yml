@@ -51,4 +51,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./Android/gradlew clean build sonarqube -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          ./Android/gradlew build sonarqube -Dsonar.login=${{ secrets.SONAR_TOKEN }}
