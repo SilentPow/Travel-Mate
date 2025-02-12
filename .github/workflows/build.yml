@@ -40,7 +40,7 @@ jobs:
         run: chmod +x Android/gradlew
 
       - name: Configure Gradle properties
-        run: mkdir -p ~/.gradle echo "systemProp.gradle.enterprise.buildScanTermsOfServiceAgreement=yes" >> ~/.gradle/gradle.properties
+        run: mkdir -p ~/.gradle ls ~
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
