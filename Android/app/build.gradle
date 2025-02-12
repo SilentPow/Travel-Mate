@@ -3,6 +3,17 @@ apply from: '../config/checkstyle.gradle'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+
+apply plugin: 'org.sonarqube'
+
+sonar {
+    properties {
+        property "sonar.projectKey", "SilentPow_Travel-Mate"
+        property "sonar.organization", "silentpow"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
