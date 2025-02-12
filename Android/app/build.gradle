@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'org.sonarqube'
 
-sonar {
+sonarqube {
     properties {
         property "sonar.projectKey", "SilentPow_Travel-Mate"
         property "sonar.organization", "silentpow"
