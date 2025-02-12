@@ -5,8 +5,9 @@ buildscript {
         kotlin_version = '1.3.50'
     }
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
@@ -18,9 +19,22 @@ buildscript {
     }
 }
 
+plugins {
+    id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "SilentPow_Travel-Mate"
+        property "sonar.organization", "silentpow"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
 allprojects {
     repositories {
         google()
+        mavenCentral()
         jcenter()
         maven { url "https://jitpack.io" }
     }
@@ -29,6 +43,7 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-ext{
+
+ext {
     roomVersion = "1.0.0-beta2"
 }
